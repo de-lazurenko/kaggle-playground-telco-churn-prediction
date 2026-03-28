@@ -125,8 +125,7 @@ This was an unusual experience for me — working at the intersection of data an
 I'm planning to keep participating in Kaggle Playground competitions. The next step is finding a partner for these projects — someone to own the ML side while I focus on analysis, and to learn from along the way. If that sounds like something you'd be interested in, feel free to reach out.
  
 **LinkedIn:** [linkedin.com/in/de-lazurenko](https://linkedin.com/in/de-lazurenko)  
-**GitHub:** [github.com/de-lazurenko](https://github.com/de-lazurenko)
- 
+
 ---
  
 *Kaggle notebook and final submission details will be added after the competition closes on March 31, 2026.*
