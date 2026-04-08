@@ -2,8 +2,8 @@
  
 > My first Kaggle Playground competition. A hands-on learning project focused on EDA, feature engineering, and understanding the end-to-end ML pipeline.
  
-![Score](https://img.shields.io/badge/Kaggle%20Score-0.9149-blue)
-![Top](https://img.shields.io/badge/Leaderboard-Top%2015%25-green)
+![Score](https://img.shields.io/badge/Kaggle%20Score-0.91822-blue)
+![Top](https://img.shields.io/badge/Leaderboard-Top%204%25-brightgreen )
  
 ---
  
@@ -96,9 +96,17 @@ Churn is heavily front-loaded. Customers who survive the first year become signi
 | + XGBoost | Added third model | 0.91074 |
 | + Tuned XGBoost | Optuna optimization | 0.91089 |
 | + GPU training | Moved to local RTX 3070 Ti | 0.91097 |
-| + Feature engineering | ORIG_proba, N-grams, Distribution features | 0.91445 |
+| + Feature engineering | ORIG_proba, N-grams, Distribution features (173 total) | 0.91445 |
 | + Multi-seed ensemble | 3 seeds × 3 models | 0.91458 |
-| **+ Optuna all models** | **Full optimization** | **0.91491** |
+| + Optuna all models | Full optimization across LGBM/XGB/CatBoost | 0.91491 |
+| + LGBM mega | 5 seeds × 50 folds | ~0.91525 OOF |
+| + GNN v1 | GraphSAGE, 25 features, KNN graph | 0.91368 |
+| + GNN ensemble | 9 models (base/wide/knn16 × 3 seeds × 10 folds), OOF 0.91687 | — |
+| + LGBM + GNN blend | LGBM 60% + GNN ensemble 40% | 0.91594 |
+| + Public predictions blend | H-blend from nina2025/ps-s6e3-29 (top 5 public notebooks) | 0.91718 |
+| + Top-2 blend | 0.91732 + 0.91731 averaged | 0.91732 |
+| + 0.91733.rr.csv | Nina's rounded+amplified prediction | 0.91733 |
+| 🏁 **Final result** | **Private leaderboard (100% test data)** | **0.91822** |
  
 The biggest single jump came from feature engineering — adding features derived from the original IBM Telco dataset (churn probabilities per category, distribution distance features, and n-gram categorical combinations). This alone added ~0.004 to the score.
  
@@ -122,6 +130,8 @@ Several techniques I learned about during this project ended up in the Appendix 
 This was an unusual experience for me — working at the intersection of data analysis and machine learning under real competition conditions. I learned a lot, and not just about the technical side. The format itself was valuable: a fixed deadline, a public leaderboard, and the constant question of whether the next experiment is worth the submission slot.
  
 I'm planning to keep participating in Kaggle Playground competitions. The next step is finding a partner for these projects — someone to own the ML side while I focus on analysis, and to learn from along the way. If that sounds like something you'd be interested in, feel free to reach out.
+
+Final private leaderboard score: **0.91822** — top 4% overall.
  
 **LinkedIn:** [linkedin.com/in/de-lazurenko](https://linkedin.com/in/de-lazurenko)  
 
